@@ -1,3 +1,9 @@
+/*
+Difference between Method and Function ?
+Method can take arguments and the return value can be stored in a variable which can be passed as argument to another function.
+Function are also same as methods except that we can pass a function as argument to another function and also we can return a function from another function.
+*/
+
 def computeinteger : AnyVal = {
   val x = 8
   if (x > 10) {
