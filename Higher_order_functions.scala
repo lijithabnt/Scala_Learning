@@ -2,6 +2,33 @@
 //fun1 (Int) => Int
 //fun2 (Int,Int) => Int
 
+
+val fun3:(Int,Int) => Int = (x:Int,y:Int) => x+y
+val fun4:(Int,Int,Int) => Int = (x:Int,y:Int,z:Int) => x+y*y+z
+fun3(34,5)
+fun4(2,4,5)
+
+val identifier = (x:Int) => x
+val square = (x:Int) => x*x
+val cube = (x:Int) => square(x)*x //passing fucntion inside a function
+//val sumOfSquare = (x:Int,y:Int) => square(x) + square(y)
+//val sumofcube = (x:Int,y:Int) => cube(x) + cube(y)
+
+
+val sum2 = (f:(Int => Int),x:Int,y:Int) => f(x) + f(y)
+
+//Using function inside a function
+
+sum2(square,3,5)
+sum2(cube,4,5)
+
+//Using function definition as anonymous fucntion in a function
+
+sum2((x:Int) => x*x,3,5)
+sum2((x:Int) => square(x)*x,4,5)
+sum2((x:Int) => x*x*10,3,5)
+
+
 //Passing a fucntion inside a function
 val fun1 = (x:Int) => x+1
 val square = (x:Int) => x*x
