@@ -19,3 +19,15 @@ list4.map(_+1) //this is palceholder when we have only one element
 //list4.map(_+"1")  means every element of list conctenated with 1
 //list4.map(_+1) means every element of list added with 1 
 
+
+==================Filter===============
+
+//filter
+
+val p:Int => Boolean =  (x:Int) => x>5
+list4
+list4.filter(p) //print where list element > 5
+list4.filterNot(p)
+list4.filter((x:Int) => x>5) //recommendable
+list4.filter((x:Int) => !(x>5))
+list4.filter(_>5)
