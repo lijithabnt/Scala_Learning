@@ -42,3 +42,24 @@ variableMatchConflict(PI)
 
 variableMatchConflict("HI")
 //res1: String = got default
+
+
+//Eliminated by erasure
+Map("A" -> "1")
+def isIntIntMap(x:Any):Boolean = {
+  x match {
+    case a:Map[Int,Int] => true
+    case _ => false
+  }
+}
+
+def isIntIntArray(x:Any):Boolean = {
+  x match {
+    case a:Array[Int] => true
+    case _ => false
+  }
+}
+isIntIntMap(Map("10" -> "1"))
+isIntIntMap(Map(10 -> 1))//will get a warning eliminated by erasure
+isIntIntArray(Array(1,2))
+isIntIntArray(Array("1","2"))
