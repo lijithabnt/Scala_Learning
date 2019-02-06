@@ -24,9 +24,13 @@ class counter(var c:Int) {
 object newobj extends  App {
 
   val ex = new counter(9)
+  val ex4 = new counter(9)
   var ex2 = new counter(12)
   var ex3 = new counter(12)
-  println(ex2 == ex3) 
+  println(ex2 == ex3) //false
+  println(ex == ex4) //false
+  ex2 = ex3 // reassignement is possible
+  ex2 = ex4 //reassignment is not possible
   //Two objects in a normal class will not be equal as every object is unique,even after cerating with the same val
   //eg: for a class Human,objects twins are are same.Basically it matches the address of the object and address of objects at any point are not equal
   //And we cannot match objects which are created using val as ittheows reassignment not possible
